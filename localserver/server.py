@@ -9,7 +9,7 @@ MPV_SOCKET = "/home/mazunki/.local/state/mpv/socket"
 
 def launch_with_mpv(video_url):
     print("launching")
-    command = ["loadfile", f"https://youtube.com/watch?v={video_url}"]
+    command = ["loadfile", f"https://youtube.com/watch?v={video_url}", "append-play"]
     msg = {"command": command}
     print(msg)
     with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:
